@@ -285,13 +285,7 @@ const Index: React.FC = () => {
 
           <div style={heroContent}>
             <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                gap: 48,
-                alignItems: "center",
-              }}
-              className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12"
+              className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center"
             >
               {/* Left */}
               <div style={{ maxWidth: 680 }}>
@@ -512,14 +506,7 @@ const Index: React.FC = () => {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: 20,
-              }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {SERVICES.map((svc, i) => {
                 const hovered = hoveredService === i;
                 return (
@@ -655,10 +642,7 @@ const Index: React.FC = () => {
         ══════════════════════════════════════════════════════════════ */}
         <section style={{ ...sectionPad, backgroundColor: "#0A0E1A" }} aria-label="Преимущества">
           <div style={container}>
-            <div
-              style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}
-              className="grid grid-cols-1 lg:grid-cols-2"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left */}
               <div>
                 <span style={sectionLabel}>Наши плюсы</span>
@@ -885,14 +869,7 @@ const Index: React.FC = () => {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(5, 1fr)",
-                gap: 16,
-              }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {STEPS.map((step, i) => (
                 <div
                   key={step.num}
@@ -966,10 +943,7 @@ const Index: React.FC = () => {
               </p>
             </div>
 
-            <div
-              style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}
-              className="grid grid-cols-1 lg:grid-cols-3"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {CASES.map((c, i) => {
                 const hovered = hoveredCase === i;
                 return (
@@ -1100,10 +1074,7 @@ const Index: React.FC = () => {
               </p>
             </div>
 
-            <div
-              style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}
-              className="grid grid-cols-1 lg:grid-cols-3"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {REVIEWS.map((rev) => (
                 <div
                   key={rev.name}
@@ -1468,15 +1439,7 @@ const Index: React.FC = () => {
           aria-label="Вызвать электрика"
         >
           <div style={container}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 60,
-                alignItems: "start",
-              }}
-              className="grid grid-cols-1 lg:grid-cols-2"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
               {/* Left */}
               <div>
                 <span style={sectionLabel}>Свяжитесь с нами</span>

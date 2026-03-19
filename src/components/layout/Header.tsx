@@ -155,6 +155,7 @@ const Header: React.FC = () => {
     borderRadius: 12,
     padding: "24px 28px",
     minWidth: 480,
+    maxWidth: "calc(100vw - 32px)",
     boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
     zIndex: 100,
   };

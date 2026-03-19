@@ -103,5 +103,10 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
