@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://elektrik-izhevsk.ru/sitemap.xml
