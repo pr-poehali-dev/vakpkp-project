@@ -196,11 +196,11 @@ const Index: React.FC = () => {
   const sectionLabel: React.CSSProperties = {
     ...font,
     display: "inline-block",
-    backgroundColor: "#0F172A",
-    border: "1px solid #1E2940",
+    backgroundColor: "#eff6ff",
+    border: "1px solid rgba(21,101,192,0.2)",
     borderRadius: 20,
     padding: "4px 14px",
-    color: "#1E88E5",
+    color: "#1565C0",
     fontSize: 12,
     fontWeight: 600,
     letterSpacing: "0.08em",
@@ -210,7 +210,7 @@ const Index: React.FC = () => {
 
   const h2Style: React.CSSProperties = {
     ...font,
-    color: "#ffffff",
+    color: "#1e293b",
     fontSize: "clamp(24px, 4vw, 36px)",
     fontWeight: 800,
     lineHeight: 1.25,
@@ -219,7 +219,7 @@ const Index: React.FC = () => {
 
   const subStyle: React.CSSProperties = {
     ...font,
-    color: "#64748B",
+    color: "#64748b",
     fontSize: 15,
     lineHeight: 1.7,
     margin: "0 0 48px",
@@ -232,7 +232,7 @@ const Index: React.FC = () => {
     minHeight: "100vh",
     display: "flex",
     alignItems: "center",
-    backgroundColor: "#0A0E1A",
+    backgroundColor: "#f8fafc",
     overflow: "hidden",
   };
 
@@ -242,21 +242,21 @@ const Index: React.FC = () => {
     backgroundImage: `url(${HERO_IMAGE})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    opacity: 0.18,
+    opacity: 0.12,
   };
 
   const heroGradient: React.CSSProperties = {
     position: "absolute",
     inset: 0,
     background:
-      "linear-gradient(135deg, rgba(10,14,26,0.95) 0%, rgba(10,14,26,0.75) 50%, rgba(21,101,192,0.15) 100%)",
+      "linear-gradient(135deg, rgba(248,250,252,0.92) 0%, rgba(248,250,252,0.75) 50%, rgba(21,101,192,0.08) 100%)",
   };
 
   const gridDecor: React.CSSProperties = {
     position: "absolute",
     inset: 0,
     backgroundImage:
-      "linear-gradient(rgba(30,41,64,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(30,41,64,0.5) 1px, transparent 1px)",
+      "linear-gradient(rgba(148,163,184,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.3) 1px, transparent 1px)",
     backgroundSize: "60px 60px",
     opacity: 0.05,
   };
@@ -271,7 +271,7 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#0A0E1A", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#f8fafc", minHeight: "100vh" }}>
       <Header />
       <main style={{ paddingTop: 64 }}>
 
@@ -295,8 +295,8 @@ const Index: React.FC = () => {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 8,
-                    backgroundColor: "rgba(21,101,192,0.15)",
-                    border: "1px solid rgba(30,136,229,0.4)",
+                    backgroundColor: "rgba(21,101,192,0.08)",
+                    border: "1px solid rgba(21,101,192,0.25)",
                     borderRadius: 20,
                     padding: "5px 14px",
                     marginBottom: 24,
@@ -312,7 +312,7 @@ const Index: React.FC = () => {
                       boxShadow: "0 0 8px #22C55E",
                     }}
                   />
-                  <span style={{ ...font, color: "#94A3B8", fontSize: 13, fontWeight: 500 }}>
+                  <span style={{ ...font, color: "#64748b", fontSize: 13, fontWeight: 500 }}>
                     Свободны — выезд сегодня
                   </span>
                 </div>
@@ -321,7 +321,7 @@ const Index: React.FC = () => {
                 <h1
                   style={{
                     ...font,
-                    color: "#ffffff",
+                    color: "#1e293b",
                     fontSize: "clamp(32px, 5vw, 60px)",
                     fontWeight: 800,
                     lineHeight: 1.1,
@@ -331,12 +331,12 @@ const Index: React.FC = () => {
                 >
                   Электрик
                   <br />
-                  <span style={{ color: "#1E88E5" }}>в Ижевске</span>
+                  <span style={{ color: "#1565C0" }}>в Ижевске</span>
                 </h1>
                 <p
                   style={{
                     ...font,
-                    color: "#CBD5E1",
+                    color: "#374151",
                     fontSize: "clamp(16px, 2.5vw, 22px)",
                     fontWeight: 600,
                     margin: "0 0 16px",
@@ -347,7 +347,7 @@ const Index: React.FC = () => {
                 <p
                   style={{
                     ...font,
-                    color: "#64748B",
+                    color: "#64748b",
                     fontSize: 15,
                     lineHeight: 1.7,
                     margin: "0 0 36px",
@@ -378,7 +378,7 @@ const Index: React.FC = () => {
                       transition: "background 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1e40af";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1565C0";
@@ -396,24 +396,23 @@ const Index: React.FC = () => {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 8,
-                      backgroundColor: "transparent",
-                      color: "#CBD5E1",
+                      color: "#374151",
                       fontSize: 15,
                       fontWeight: 600,
                       padding: "14px 28px",
                       borderRadius: 10,
                       textDecoration: "none",
-                      border: "1px solid #1E2940",
+                      border: "1px solid #e2e8f0",
                       cursor: "pointer",
                       transition: "border-color 0.2s, color 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E88E5";
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#CBD5E1";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#374151";
                     }}
                   >
                     <Icon name="Send" size={17} />
@@ -432,8 +431,8 @@ const Index: React.FC = () => {
                       key={item.text}
                       style={{ display: "flex", alignItems: "center", gap: 8 }}
                     >
-                      <Icon name={item.icon} size={16} color="#1E88E5" />
-                      <span style={{ ...font, color: "#94A3B8", fontSize: 13, fontWeight: 500 }}>
+                      <Icon name={item.icon} size={16} color="#1565C0" />
+                      <span style={{ ...font, color: "#64748b", fontSize: 13, fontWeight: 500 }}>
                         {item.text}
                       </span>
                     </div>
@@ -454,8 +453,8 @@ const Index: React.FC = () => {
                   <div
                     key={stat.label}
                     style={{
-                      backgroundColor: "rgba(15,23,42,0.85)",
-                      border: "1px solid #1E2940",
+                      backgroundColor: "rgba(255,255,255,0.9)",
+                      border: "1px solid #e2e8f0",
                       borderRadius: 12,
                       padding: "20px 24px",
                       backdropFilter: "blur(8px)",
@@ -465,7 +464,7 @@ const Index: React.FC = () => {
                     <p
                       style={{
                         ...font,
-                        color: "#1E88E5",
+                        color: "#1565C0",
                         fontSize: 34,
                         fontWeight: 800,
                         margin: 0,
@@ -477,7 +476,7 @@ const Index: React.FC = () => {
                     <p
                       style={{
                         ...font,
-                        color: "#64748B",
+                        color: "#64748b",
                         fontSize: 12,
                         fontWeight: 500,
                         margin: "6px 0 0",
@@ -495,7 +494,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 2 — УСЛУГИ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#060912" }} aria-label="Услуги">
+        <section style={{ ...sectionPad, backgroundColor: "#f1f5f9" }} aria-label="Услуги">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>Чем занимаемся</span>
@@ -517,8 +516,8 @@ const Index: React.FC = () => {
                       ...font,
                       display: "flex",
                       flexDirection: "column",
-                      backgroundColor: "#111827",
-                      border: hovered ? "1px solid #1565C0" : "1px solid #1E2940",
+                      backgroundColor: "#ffffff",
+                      border: hovered ? "1px solid #1565C0" : "1px solid #e2e8f0",
                       borderRadius: 14,
                       padding: "24px 20px",
                       textDecoration: "none",
@@ -526,7 +525,7 @@ const Index: React.FC = () => {
                       transform: hovered ? "scale(1.02)" : "scale(1)",
                       boxShadow: hovered
                         ? "0 8px 32px rgba(21,101,192,0.18)"
-                        : "0 2px 12px rgba(0,0,0,0.2)",
+                        : "0 2px 12px rgba(0,0,0,0.06)",
                       cursor: "pointer",
                     }}
                     onMouseEnter={() => setHoveredService(i)}
@@ -536,8 +535,8 @@ const Index: React.FC = () => {
                       style={{
                         width: 48,
                         height: 48,
-                        backgroundColor: hovered ? "#1565C0" : "#0F172A",
-                        border: "1px solid #1E2940",
+                        backgroundColor: hovered ? "#1565C0" : "#eff6ff",
+                        border: "1px solid #e2e8f0",
                         borderRadius: 12,
                         display: "flex",
                         alignItems: "center",
@@ -547,12 +546,12 @@ const Index: React.FC = () => {
                         flexShrink: 0,
                       }}
                     >
-                      <Icon name={svc.icon} size={22} color={hovered ? "#ffffff" : "#1E88E5"} />
+                      <Icon name={svc.icon} size={22} color={hovered ? "#ffffff" : "#1565C0"} />
                     </div>
                     <p
                       style={{
                         ...font,
-                        color: "#ffffff",
+                        color: "#1e293b",
                         fontSize: 15,
                         fontWeight: 700,
                         margin: "0 0 8px",
@@ -563,7 +562,7 @@ const Index: React.FC = () => {
                     <p
                       style={{
                         ...font,
-                        color: "#64748B",
+                        color: "#64748b",
                         fontSize: 13,
                         lineHeight: 1.6,
                         flex: 1,
@@ -579,10 +578,10 @@ const Index: React.FC = () => {
                         justifyContent: "space-between",
                         marginTop: 16,
                         paddingTop: 14,
-                        borderTop: "1px solid #1E2940",
+                        borderTop: "1px solid #e2e8f0",
                       }}
                     >
-                      <span style={{ ...font, color: "#1E88E5", fontSize: 13, fontWeight: 700 }}>
+                      <span style={{ ...font, color: "#1565C0", fontSize: 13, fontWeight: 700 }}>
                         от {svc.price}
                       </span>
                       <div
@@ -592,7 +591,7 @@ const Index: React.FC = () => {
                           justifyContent: "center",
                           width: 32,
                           height: 32,
-                          backgroundColor: hovered ? "#1565C0" : "#1E2940",
+                          backgroundColor: hovered ? "#1565C0" : "#e2e8f0",
                           borderRadius: 8,
                           transition: "background 0.25s, transform 0.25s",
                           transform: hovered ? "translateX(3px)" : "translateX(0)",
@@ -614,20 +613,20 @@ const Index: React.FC = () => {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  color: "#1E88E5",
+                  color: "#1565C0",
                   fontSize: 14,
                   fontWeight: 600,
                   textDecoration: "none",
-                  border: "1px solid #1E2940",
+                  border: "1px solid #e2e8f0",
                   borderRadius: 8,
                   padding: "10px 20px",
                   transition: "border-color 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E88E5";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
                 }}
               >
                 Все услуги
@@ -640,7 +639,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 3 — ПРЕИМУЩЕСТВА
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#0A0E1A" }} aria-label="Преимущества">
+        <section style={{ ...sectionPad, backgroundColor: "#f8fafc" }} aria-label="Преимущества">
           <div style={container}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left */}
@@ -658,8 +657,8 @@ const Index: React.FC = () => {
                         style={{
                           width: 24,
                           height: 24,
-                          backgroundColor: "rgba(21,101,192,0.15)",
-                          border: "1px solid rgba(30,136,229,0.3)",
+                          backgroundColor: "rgba(21,101,192,0.08)",
+                          border: "1px solid rgba(21,101,192,0.25)",
                           borderRadius: 6,
                           display: "flex",
                           alignItems: "center",
@@ -668,9 +667,9 @@ const Index: React.FC = () => {
                           marginTop: 1,
                         }}
                       >
-                        <Icon name="Check" size={13} color="#1E88E5" />
+                        <Icon name="Check" size={13} color="#1565C0" />
                       </div>
-                      <span style={{ ...font, color: "#CBD5E1", fontSize: 14, lineHeight: 1.5 }}>
+                      <span style={{ ...font, color: "#374151", fontSize: 14, lineHeight: 1.5 }}>
                         {adv}
                       </span>
                     </li>
@@ -695,7 +694,7 @@ const Index: React.FC = () => {
                       transition: "background 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1e40af";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1565C0";
@@ -721,7 +720,7 @@ const Index: React.FC = () => {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(to top, rgba(10,14,26,0.85) 0%, transparent 50%)",
+                    background: "linear-gradient(to top, rgba(248,250,252,0.9) 0%, transparent 50%)",
                   }}
                 />
                 {/* Mini stats */}
@@ -745,8 +744,8 @@ const Index: React.FC = () => {
                     <div
                       key={s.lbl}
                       style={{
-                        backgroundColor: "rgba(10,14,26,0.85)",
-                        border: "1px solid #1E2940",
+                        backgroundColor: "rgba(255,255,255,0.9)",
+                        border: "1px solid #e2e8f0",
                         borderRadius: 10,
                         padding: "12px 16px",
                         textAlign: "center",
@@ -754,10 +753,10 @@ const Index: React.FC = () => {
                         flex: 1,
                       }}
                     >
-                      <p style={{ ...font, color: "#1E88E5", fontSize: 20, fontWeight: 800, margin: 0 }}>
+                      <p style={{ ...font, color: "#1565C0", fontSize: 20, fontWeight: 800, margin: 0 }}>
                         {s.val}
                       </p>
-                      <p style={{ ...font, color: "#64748B", fontSize: 11, margin: "4px 0 0" }}>
+                      <p style={{ ...font, color: "#64748b", fontSize: 11, margin: "4px 0 0" }}>
                         {s.lbl}
                       </p>
                     </div>
@@ -771,7 +770,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 4 — ЦЕНЫ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#060912" }} aria-label="Цены">
+        <section style={{ ...sectionPad, backgroundColor: "#f1f5f9" }} aria-label="Цены">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>Прозрачно</span>
@@ -785,7 +784,7 @@ const Index: React.FC = () => {
               style={{
                 maxWidth: 720,
                 margin: "0 auto",
-                border: "1px solid #1E2940",
+                border: "1px solid #e2e8f0",
                 borderRadius: 14,
                 overflow: "hidden",
               }}
@@ -798,21 +797,21 @@ const Index: React.FC = () => {
                     alignItems: "center",
                     justifyContent: "space-between",
                     padding: "16px 24px",
-                    backgroundColor: i % 2 === 0 ? "#111827" : "#0D1424",
-                    borderBottom: i < PRICES.length - 1 ? "1px solid #1E2940" : "none",
+                    backgroundColor: i % 2 === 0 ? "#ffffff" : "#f8fafc",
+                    borderBottom: i < PRICES.length - 1 ? "1px solid #e2e8f0" : "none",
                     gap: 16,
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     <Icon name="ChevronRight" size={14} color="#1565C0" style={{ flexShrink: 0 }} />
-                    <span style={{ ...font, color: "#CBD5E1", fontSize: 14, fontWeight: 500 }}>
+                    <span style={{ ...font, color: "#374151", fontSize: 14, fontWeight: 500 }}>
                       {row.name}
                     </span>
                   </div>
                   <span
                     style={{
                       ...font,
-                      color: "#1E88E5",
+                      color: "#1565C0",
                       fontSize: 14,
                       fontWeight: 700,
                       whiteSpace: "nowrap",
@@ -843,7 +842,7 @@ const Index: React.FC = () => {
                   transition: "background 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E88E5";
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1e40af";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1565C0";
@@ -859,7 +858,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 5 — КАК МЫ РАБОТАЕМ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#0A0E1A" }} aria-label="Как мы работаем">
+        <section style={{ ...sectionPad, backgroundColor: "#f8fafc" }} aria-label="Как мы работаем">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>Процесс</span>
@@ -875,8 +874,8 @@ const Index: React.FC = () => {
                   key={step.num}
                   style={{
                     position: "relative",
-                    backgroundColor: "#111827",
-                    border: "1px solid #1E2940",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
                     borderRadius: 14,
                     padding: "24px 20px",
                   }}
@@ -891,15 +890,15 @@ const Index: React.FC = () => {
                         right: -10,
                         width: 20,
                         height: 1,
-                        backgroundColor: "#1E2940",
+                        backgroundColor: "#e2e8f0",
                         zIndex: 1,
                       }}
                     />
                   )}
                   <div
                     style={{
-                      backgroundColor: "rgba(21,101,192,0.12)",
-                      border: "1px solid rgba(30,136,229,0.25)",
+                      backgroundColor: "rgba(21,101,192,0.08)",
+                      border: "1px solid rgba(21,101,192,0.25)",
                       borderRadius: 8,
                       display: "inline-block",
                       padding: "4px 10px",
@@ -909,7 +908,7 @@ const Index: React.FC = () => {
                     <span
                       style={{
                         ...font,
-                        color: "#1E88E5",
+                        color: "#1565C0",
                         fontSize: 13,
                         fontWeight: 800,
                         letterSpacing: "0.06em",
@@ -918,10 +917,10 @@ const Index: React.FC = () => {
                       {step.num}
                     </span>
                   </div>
-                  <p style={{ ...font, color: "#ffffff", fontSize: 14, fontWeight: 700, margin: "0 0 8px" }}>
+                  <p style={{ ...font, color: "#1e293b", fontSize: 14, fontWeight: 700, margin: "0 0 8px" }}>
                     {step.title}
                   </p>
-                  <p style={{ ...font, color: "#64748B", fontSize: 12, lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ ...font, color: "#64748b", fontSize: 12, lineHeight: 1.6, margin: 0 }}>
                     {step.desc}
                   </p>
                 </div>
@@ -933,7 +932,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 6 — КЕЙСЫ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#060912" }} aria-label="Выполненные работы">
+        <section style={{ ...sectionPad, backgroundColor: "#f1f5f9" }} aria-label="Выполненные работы">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>Портфолио</span>
@@ -950,8 +949,8 @@ const Index: React.FC = () => {
                   <div
                     key={c.title}
                     style={{
-                      backgroundColor: "#111827",
-                      border: hovered ? "1px solid #1565C0" : "1px solid #1E2940",
+                      backgroundColor: "#ffffff",
+                      border: hovered ? "1px solid #1565C0" : "1px solid #e2e8f0",
                       borderRadius: 14,
                       padding: "24px",
                       transition: "border-color 0.2s, box-shadow 0.2s",
@@ -968,11 +967,11 @@ const Index: React.FC = () => {
                           key={tag}
                           style={{
                             ...font,
-                            backgroundColor: "rgba(21,101,192,0.12)",
-                            border: "1px solid rgba(30,136,229,0.2)",
+                            backgroundColor: "rgba(21,101,192,0.08)",
+                            border: "1px solid rgba(21,101,192,0.25)",
                             borderRadius: 12,
                             padding: "2px 10px",
-                            color: "#1E88E5",
+                            color: "#1565C0",
                             fontSize: 11,
                             fontWeight: 600,
                           }}
@@ -984,7 +983,7 @@ const Index: React.FC = () => {
                     <p
                       style={{
                         ...font,
-                        color: "#ffffff",
+                        color: "#1e293b",
                         fontSize: 15,
                         fontWeight: 700,
                         margin: "0 0 10px",
@@ -996,7 +995,7 @@ const Index: React.FC = () => {
                     <p
                       style={{
                         ...font,
-                        color: "#64748B",
+                        color: "#64748b",
                         fontSize: 13,
                         lineHeight: 1.6,
                         margin: "0 0 20px",
@@ -1009,18 +1008,18 @@ const Index: React.FC = () => {
                         display: "flex",
                         gap: 16,
                         paddingTop: 16,
-                        borderTop: "1px solid #1E2940",
+                        borderTop: "1px solid #e2e8f0",
                       }}
                     >
                       <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <Icon name="Banknote" size={14} color="#1565C0" />
-                        <span style={{ ...font, color: "#94A3B8", fontSize: 13, fontWeight: 600 }}>
+                        <span style={{ ...font, color: "#64748b", fontSize: 13, fontWeight: 600 }}>
                           {c.cost}
                         </span>
                       </div>
                       <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <Icon name="Clock" size={14} color="#1565C0" />
-                        <span style={{ ...font, color: "#94A3B8", fontSize: 13, fontWeight: 600 }}>
+                        <span style={{ ...font, color: "#64748b", fontSize: 13, fontWeight: 600 }}>
                           {c.duration}
                         </span>
                       </div>
@@ -1038,20 +1037,20 @@ const Index: React.FC = () => {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  color: "#1E88E5",
+                  color: "#1565C0",
                   fontSize: 14,
                   fontWeight: 600,
                   textDecoration: "none",
-                  border: "1px solid #1E2940",
+                  border: "1px solid #e2e8f0",
                   borderRadius: 8,
                   padding: "10px 20px",
                   transition: "border-color 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E88E5";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
                 }}
               >
                 Все кейсы
@@ -1064,7 +1063,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 7 — ОТЗЫВЫ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#0A0E1A" }} aria-label="Отзывы клиентов">
+        <section style={{ ...sectionPad, backgroundColor: "#f8fafc" }} aria-label="Отзывы клиентов">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>Мнения клиентов</span>
@@ -1079,8 +1078,8 @@ const Index: React.FC = () => {
                 <div
                   key={rev.name}
                   style={{
-                    backgroundColor: "#111827",
-                    border: "1px solid #1E2940",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
                     borderRadius: 14,
                     padding: "24px",
                   }}
@@ -1094,7 +1093,7 @@ const Index: React.FC = () => {
                   <p
                     style={{
                       ...font,
-                      color: "#CBD5E1",
+                      color: "#374151",
                       fontSize: 13,
                       lineHeight: 1.7,
                       margin: "0 0 20px",
@@ -1109,7 +1108,7 @@ const Index: React.FC = () => {
                       alignItems: "center",
                       justifyContent: "space-between",
                       paddingTop: 16,
-                      borderTop: "1px solid #1E2940",
+                      borderTop: "1px solid #e2e8f0",
                     }}
                   >
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -1128,15 +1127,15 @@ const Index: React.FC = () => {
                         <Icon name="User" size={16} color="#ffffff" />
                       </div>
                       <div>
-                        <p style={{ ...font, color: "#ffffff", fontSize: 13, fontWeight: 700, margin: 0 }}>
+                        <p style={{ ...font, color: "#1e293b", fontSize: 13, fontWeight: 700, margin: 0 }}>
                           {rev.name}
                         </p>
-                        <p style={{ ...font, color: "#64748B", fontSize: 11, margin: "2px 0 0" }}>
+                        <p style={{ ...font, color: "#64748b", fontSize: 11, margin: "2px 0 0" }}>
                           {rev.city}
                         </p>
                       </div>
                     </div>
-                    <span style={{ ...font, color: "#475569", fontSize: 11 }}>{rev.date}</span>
+                    <span style={{ ...font, color: "#64748b", fontSize: 11 }}>{rev.date}</span>
                   </div>
                 </div>
               ))}
@@ -1150,20 +1149,20 @@ const Index: React.FC = () => {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  color: "#1E88E5",
+                  color: "#1565C0",
                   fontSize: 14,
                   fontWeight: 600,
                   textDecoration: "none",
-                  border: "1px solid #1E2940",
+                  border: "1px solid #e2e8f0",
                   borderRadius: 8,
                   padding: "10px 20px",
                   transition: "border-color 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E88E5";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
                 }}
               >
                 Все отзывы
@@ -1176,7 +1175,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 8 — FAQ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#060912" }} aria-label="Частые вопросы">
+        <section style={{ ...sectionPad, backgroundColor: "#f1f5f9" }} aria-label="Частые вопросы">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span style={sectionLabel}>FAQ</span>
@@ -1195,8 +1194,8 @@ const Index: React.FC = () => {
                   <div
                     key={i}
                     style={{
-                      backgroundColor: "#111827",
-                      border: isOpen ? "1px solid #1565C0" : "1px solid #1E2940",
+                      backgroundColor: "#ffffff",
+                      border: isOpen ? "1px solid #1565C0" : "1px solid #e2e8f0",
                       borderRadius: 12,
                       overflow: "hidden",
                       transition: "border-color 0.2s",
@@ -1221,7 +1220,7 @@ const Index: React.FC = () => {
                       <span
                         style={{
                           ...font,
-                          color: isOpen ? "#1E88E5" : "#ffffff",
+                          color: isOpen ? "#1565C0" : "#1e293b",
                           fontSize: 15,
                           fontWeight: 600,
                           lineHeight: 1.4,
@@ -1234,7 +1233,7 @@ const Index: React.FC = () => {
                         style={{
                           width: 28,
                           height: 28,
-                          backgroundColor: isOpen ? "#1565C0" : "#1E2940",
+                          backgroundColor: isOpen ? "#1565C0" : "#e2e8f0",
                           borderRadius: 6,
                           display: "flex",
                           alignItems: "center",
@@ -1254,13 +1253,13 @@ const Index: React.FC = () => {
                       <div
                         style={{
                           padding: "0 20px 18px",
-                          borderTop: "1px solid #1E2940",
+                          borderTop: "1px solid #e2e8f0",
                         }}
                       >
                         <p
                           style={{
                             ...font,
-                            color: "#94A3B8",
+                            color: "#64748b",
                             fontSize: 14,
                             lineHeight: 1.7,
                             margin: "14px 0 0",
@@ -1280,7 +1279,7 @@ const Index: React.FC = () => {
         {/* ══════════════════════════════════════════════════════════════
             БЛОК 9 — РАЙОНЫ
         ══════════════════════════════════════════════════════════════ */}
-        <section style={{ ...sectionPad, backgroundColor: "#0A0E1A" }} aria-label="Районы выезда">
+        <section style={{ ...sectionPad, backgroundColor: "#f8fafc" }} aria-label="Районы выезда">
           <div style={container}>
             <div style={{ textAlign: "center", marginBottom: 40 }}>
               <span style={sectionLabel}>География</span>
@@ -1302,22 +1301,22 @@ const Index: React.FC = () => {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 6,
-                    backgroundColor: "#111827",
-                    border: "1px solid #1E2940",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
                     borderRadius: 20,
                     padding: "8px 16px",
-                    color: "#CBD5E1",
+                    color: "#374151",
                     fontSize: 13,
                     fontWeight: 500,
                     transition: "border-color 0.2s, color 0.2s",
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLSpanElement).style.borderColor = "#1565C0";
-                    (e.currentTarget as HTMLSpanElement).style.color = "#1E88E5";
+                    (e.currentTarget as HTMLSpanElement).style.color = "#1565C0";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLSpanElement).style.borderColor = "#1E2940";
-                    (e.currentTarget as HTMLSpanElement).style.color = "#CBD5E1";
+                    (e.currentTarget as HTMLSpanElement).style.borderColor = "#e2e8f0";
+                    (e.currentTarget as HTMLSpanElement).style.color = "#374151";
                   }}
                 >
                   <Icon name="MapPin" size={13} color="#1565C0" />
@@ -1329,8 +1328,8 @@ const Index: React.FC = () => {
             <div
               style={{
                 marginTop: 40,
-                backgroundColor: "#111827",
-                border: "1px solid #1E2940",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: 14,
                 padding: "24px 28px",
                 display: "flex",
@@ -1343,8 +1342,8 @@ const Index: React.FC = () => {
                 style={{
                   width: 44,
                   height: 44,
-                  backgroundColor: "rgba(21,101,192,0.15)",
-                  border: "1px solid rgba(30,136,229,0.3)",
+                  backgroundColor: "rgba(21,101,192,0.08)",
+                  border: "1px solid rgba(21,101,192,0.25)",
                   borderRadius: 10,
                   display: "flex",
                   alignItems: "center",
@@ -1352,13 +1351,13 @@ const Index: React.FC = () => {
                   flexShrink: 0,
                 }}
               >
-                <Icon name="Car" size={20} color="#1E88E5" />
+                <Icon name="Car" size={20} color="#1565C0" />
               </div>
               <div style={{ flex: 1, minWidth: 200 }}>
-                <p style={{ ...font, color: "#ffffff", fontSize: 15, fontWeight: 700, margin: "0 0 4px" }}>
+                <p style={{ ...font, color: "#1e293b", fontSize: 15, fontWeight: 700, margin: "0 0 4px" }}>
                   Бесплатный выезд при выполнении работ
                 </p>
-                <p style={{ ...font, color: "#64748B", fontSize: 13, margin: 0 }}>
+                <p style={{ ...font, color: "#64748b", fontSize: 13, margin: 0 }}>
                   Стоимость выезда включена в стоимость работ по всему Ижевску и Завьялово
                 </p>
               </div>
@@ -1380,7 +1379,7 @@ const Index: React.FC = () => {
                   transition: "background 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E88E5";
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1e40af";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1565C0";
@@ -1397,7 +1396,7 @@ const Index: React.FC = () => {
             БЛОК 10 — SEO-ТЕКСТ
         ══════════════════════════════════════════════════════════════ */}
         <section
-          style={{ ...sectionPad, backgroundColor: "#060912" }}
+          style={{ ...sectionPad, backgroundColor: "#f1f5f9" }}
           aria-label="Об услугах электрика"
         >
           <div style={{ ...container, maxWidth: 860 }}>
@@ -1414,7 +1413,7 @@ const Index: React.FC = () => {
                   key={i}
                   style={{
                     ...font,
-                    color: "#64748B",
+                    color: "#64748b",
                     fontSize: 14,
                     lineHeight: 1.85,
                     margin: 0,
@@ -1433,8 +1432,8 @@ const Index: React.FC = () => {
         <section
           style={{
             ...sectionPad,
-            backgroundColor: "#0A0E1A",
-            borderTop: "1px solid #1E2940",
+            backgroundColor: "#f8fafc",
+            borderTop: "1px solid #e2e8f0",
           }}
           aria-label="Вызвать электрика"
         >
@@ -1446,7 +1445,7 @@ const Index: React.FC = () => {
                 <h2 style={{ ...h2Style, marginBottom: 8 }}>
                   Вызвать электрика
                   <br />
-                  <span style={{ color: "#1E88E5" }}>в Ижевске</span>
+                  <span style={{ color: "#1565C0" }}>в Ижевске</span>
                 </h2>
                 <p style={{ ...subStyle, marginBottom: 36 }}>
                   Ответим на звонок с 8:00 до 22:00. Мастер приедет в день обращения — без ожидания
@@ -1461,8 +1460,8 @@ const Index: React.FC = () => {
                       display: "flex",
                       alignItems: "center",
                       gap: 14,
-                      backgroundColor: "#111827",
-                      border: "1px solid #1E2940",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #e2e8f0",
                       borderRadius: 12,
                       padding: "16px 20px",
                       textDecoration: "none",
@@ -1472,7 +1471,7 @@ const Index: React.FC = () => {
                       (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
                     }}
                   >
                     <div
@@ -1490,10 +1489,10 @@ const Index: React.FC = () => {
                       <Icon name="Phone" size={20} color="#ffffff" />
                     </div>
                     <div>
-                      <p style={{ ...font, color: "#64748B", fontSize: 11, fontWeight: 600, margin: "0 0 2px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                      <p style={{ ...font, color: "#64748b", fontSize: 11, fontWeight: 600, margin: "0 0 2px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
                         Телефон
                       </p>
-                      <p style={{ ...font, color: "#ffffff", fontSize: 18, fontWeight: 800, margin: 0 }}>
+                      <p style={{ ...font, color: "#1e293b", fontSize: 18, fontWeight: 800, margin: 0 }}>
                         +7 (912) 465-80-50
                       </p>
                     </div>
@@ -1508,26 +1507,26 @@ const Index: React.FC = () => {
                       display: "flex",
                       alignItems: "center",
                       gap: 14,
-                      backgroundColor: "#111827",
-                      border: "1px solid #1E2940",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #e2e8f0",
                       borderRadius: 12,
                       padding: "16px 20px",
                       textDecoration: "none",
                       transition: "border-color 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
                     }}
                   >
                     <div
                       style={{
                         width: 44,
                         height: 44,
-                        backgroundColor: "#0F2A4A",
-                        border: "1px solid rgba(30,136,229,0.3)",
+                        backgroundColor: "#dbeafe",
+                        border: "1px solid rgba(21,101,192,0.25)",
                         borderRadius: 10,
                         display: "flex",
                         alignItems: "center",
@@ -1535,13 +1534,13 @@ const Index: React.FC = () => {
                         flexShrink: 0,
                       }}
                     >
-                      <Icon name="Send" size={20} color="#1E88E5" />
+                      <Icon name="Send" size={20} color="#1565C0" />
                     </div>
                     <div>
-                      <p style={{ ...font, color: "#64748B", fontSize: 11, fontWeight: 600, margin: "0 0 2px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                      <p style={{ ...font, color: "#64748b", fontSize: 11, fontWeight: 600, margin: "0 0 2px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
                         Telegram
                       </p>
-                      <p style={{ ...font, color: "#1E88E5", fontSize: 18, fontWeight: 800, margin: 0 }}>
+                      <p style={{ ...font, color: "#1565C0", fontSize: 18, fontWeight: 800, margin: 0 }}>
                         @elektrik_izh
                       </p>
                     </div>
@@ -1551,8 +1550,8 @@ const Index: React.FC = () => {
                 {/* Working hours */}
                 <div
                   style={{
-                    backgroundColor: "#111827",
-                    border: "1px solid #1E2940",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
                     borderRadius: 12,
                     padding: "16px 20px",
                     display: "flex",
@@ -1560,12 +1559,12 @@ const Index: React.FC = () => {
                     gap: 12,
                   }}
                 >
-                  <Icon name="Clock" size={18} color="#1E88E5" style={{ flexShrink: 0 }} />
+                  <Icon name="Clock" size={18} color="#1565C0" style={{ flexShrink: 0 }} />
                   <div>
-                    <p style={{ ...font, color: "#ffffff", fontSize: 14, fontWeight: 600, margin: "0 0 2px" }}>
+                    <p style={{ ...font, color: "#1e293b", fontSize: 14, fontWeight: 600, margin: "0 0 2px" }}>
                       Режим работы: ежедневно 8:00 – 22:00
                     </p>
-                    <p style={{ ...font, color: "#64748B", fontSize: 12, margin: 0 }}>
+                    <p style={{ ...font, color: "#64748b", fontSize: 12, margin: 0 }}>
                       Без выходных · Ижевск и Завьялово
                     </p>
                   </div>

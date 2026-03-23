@@ -29,8 +29,8 @@ const Footer: React.FC = () => {
 
   const footerStyle: React.CSSProperties = {
     ...fontStyle,
-    backgroundColor: "#060912",
-    borderTop: "1px solid #1E2940",
+    backgroundColor: "#f1f5f9",
+    borderTop: "1px solid #e2e8f0",
   };
 
   const containerStyle: React.CSSProperties = {
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
   };
 
   const colTitleStyle: React.CSSProperties = {
-    color: "#ffffff",
+    color: "#1e293b",
     fontSize: 13,
     fontWeight: 700,
     letterSpacing: "0.08em",
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
     display: "flex",
     alignItems: "center",
     gap: 8,
-    color: "#64748B",
+    color: "#64748b",
     fontSize: 13,
     fontWeight: 500,
     textDecoration: "none",
@@ -83,13 +83,13 @@ const Footer: React.FC = () => {
     fontSize: 20,
     fontWeight: 700,
     letterSpacing: "0.08em",
-    color: "#ffffff",
+    color: "#1e293b",
     lineHeight: 1,
     fontFamily: "'Montserrat', sans-serif",
   };
 
   const descStyle: React.CSSProperties = {
-    color: "#64748B",
+    color: "#64748b",
     fontSize: 13,
     lineHeight: 1.7,
     marginTop: 16,
@@ -101,8 +101,8 @@ const Footer: React.FC = () => {
     display: "flex",
     alignItems: "center",
     gap: 10,
-    backgroundColor: "#0F172A",
-    border: "1px solid #1E2940",
+    backgroundColor: "#ffffff",
+    border: "1px solid #e2e8f0",
     borderRadius: 8,
     padding: "10px 14px",
     marginBottom: 8,
@@ -111,14 +111,14 @@ const Footer: React.FC = () => {
   };
 
   const contactChipTextStyle: React.CSSProperties = {
-    color: "#CBD5E1",
+    color: "#374151",
     fontSize: 13,
     fontWeight: 600,
     fontFamily: "'Montserrat', sans-serif",
   };
 
   const dividerStyle: React.CSSProperties = {
-    borderTop: "1px solid #1E2940",
+    borderTop: "1px solid #e2e8f0",
     marginTop: 48,
     paddingTop: 24,
     display: "flex",
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
   };
 
   const copyrightStyle: React.CSSProperties = {
-    color: "#475569",
+    color: "#94a3b8",
     fontSize: 12,
     fontFamily: "'Montserrat', sans-serif",
   };
@@ -142,14 +142,14 @@ const Footer: React.FC = () => {
   };
 
   const infoLabelStyle: React.CSSProperties = {
-    color: "#475569",
+    color: "#94a3b8",
     fontSize: 12,
     fontWeight: 500,
     fontFamily: "'Montserrat', sans-serif",
   };
 
   const infoValueStyle: React.CSSProperties = {
-    color: "#94A3B8",
+    color: "#374151",
     fontSize: 13,
     fontWeight: 500,
     fontFamily: "'Montserrat', sans-serif",
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
                 <Icon name="Zap" size={22} color="#ffffff" />
               </div>
               <span style={logoTextStyle}>
-                ЭЛЕКТРИК<span style={{ color: "#1E88E5" }}>УДМ</span>
+                ЭЛЕКТРИК<span style={{ color: "#1565C0" }}>УДМ</span>
               </span>
             </div>
             <p style={descStyle}>
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
               }}
             >
               <div
@@ -212,14 +212,14 @@ const Footer: React.FC = () => {
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1565C0";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1E2940";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2e8f0";
               }}
             >
               <div
                 style={{
                   width: 30,
                   height: 30,
-                  backgroundColor: "#0F2A4A",
+                  backgroundColor: "#dbeafe",
                   borderRadius: 6,
                   display: "flex",
                   alignItems: "center",
@@ -227,9 +227,9 @@ const Footer: React.FC = () => {
                   flexShrink: 0,
                 }}
               >
-                <Icon name="Send" size={14} color="#1E88E5" />
+                <Icon name="Send" size={14} color="#1565C0" />
               </div>
-              <span style={{ ...contactChipTextStyle, color: "#1E88E5" }}>@elektrik_izh</span>
+              <span style={{ ...contactChipTextStyle, color: "#1565C0" }}>@elektrik_izh</span>
             </a>
           </div>
 
@@ -243,10 +243,10 @@ const Footer: React.FC = () => {
                     to={s.href}
                     style={footerLinkStyle}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#64748B";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#64748b";
                     }}
                   >
                     <Icon name="ChevronRight" size={13} color="#1565C0" style={{ flexShrink: 0 }} />
@@ -267,10 +267,10 @@ const Footer: React.FC = () => {
                     to={n.href}
                     style={footerLinkStyle}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#64748B";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#64748b";
                     }}
                   >
                     <Icon name="ChevronRight" size={13} color="#1565C0" style={{ flexShrink: 0 }} />
@@ -294,14 +294,13 @@ const Footer: React.FC = () => {
                   style={{
                     ...infoValueStyle,
                     textDecoration: "none",
-                    color: "#CBD5E1",
                     fontWeight: 600,
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#CBD5E1";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#374151";
                   }}
                 >
                   +7 (912) 465-80-50
@@ -318,13 +317,13 @@ const Footer: React.FC = () => {
                   style={{
                     ...infoValueStyle,
                     textDecoration: "none",
-                    color: "#1E88E5",
+                    color: "#1565C0",
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#60A5FA";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#1e40af";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                   }}
                 >
                   @elektrik_izh
@@ -335,8 +334,8 @@ const Footer: React.FC = () => {
             {/* Schedule */}
             <div
               style={{
-                backgroundColor: "#0F172A",
-                border: "1px solid #1E2940",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: 10,
                 padding: "14px 16px",
                 marginBottom: 12,
@@ -344,7 +343,7 @@ const Footer: React.FC = () => {
             >
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                 <Icon name="Clock" size={14} color="#1565C0" />
-                <span style={{ ...infoLabelStyle, color: "#94A3B8", fontWeight: 600, fontSize: 13 }}>
+                <span style={{ ...infoLabelStyle, fontWeight: 600, fontSize: 13 }}>
                   Режим работы
                 </span>
               </div>
@@ -357,15 +356,15 @@ const Footer: React.FC = () => {
             {/* Area */}
             <div
               style={{
-                backgroundColor: "#0F172A",
-                border: "1px solid #1E2940",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: 10,
                 padding: "14px 16px",
               }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                 <Icon name="MapPin" size={14} color="#1565C0" />
-                <span style={{ ...infoLabelStyle, color: "#94A3B8", fontWeight: 600, fontSize: 13 }}>
+                <span style={{ ...infoLabelStyle, fontWeight: 600, fontSize: 13 }}>
                   Районы работы
                 </span>
               </div>
@@ -383,17 +382,17 @@ const Footer: React.FC = () => {
           <Link
             to="/privacy/"
             style={{
-              color: "#475569",
+              color: "#94a3b8",
               fontSize: 12,
               textDecoration: "none",
               fontFamily: "'Montserrat', sans-serif",
               transition: "color 0.2s",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color = "#94A3B8";
+              (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color = "#475569";
+              (e.currentTarget as HTMLAnchorElement).style.color = "#94a3b8";
             }}
           >
             Политика конфиденциальности

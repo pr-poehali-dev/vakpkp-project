@@ -55,10 +55,11 @@ const Header: React.FC = () => {
     right: 0,
     zIndex: 50,
     height: 64,
-    backgroundColor: "#0A0E1A",
-    borderBottom: "1px solid #1E2940",
+    backgroundColor: "#ffffff",
+    borderBottom: "1px solid #e2e8f0",
     display: "flex",
     alignItems: "center",
+    boxShadow: "0 1px 8px rgba(0,0,0,0.06)",
   };
 
   const containerStyle: React.CSSProperties = {
@@ -96,7 +97,7 @@ const Header: React.FC = () => {
     fontSize: 18,
     fontWeight: 700,
     letterSpacing: "0.08em",
-    color: "#ffffff",
+    color: "#1e293b",
     lineHeight: 1,
   };
 
@@ -109,7 +110,7 @@ const Header: React.FC = () => {
   };
 
   const navLinkStyle: React.CSSProperties = {
-    color: "#CBD5E1",
+    color: "#475569",
     fontSize: 13,
     fontWeight: 500,
     padding: "6px 10px",
@@ -150,13 +151,13 @@ const Header: React.FC = () => {
     top: 64,
     left: "50%",
     transform: "translateX(-50%)",
-    backgroundColor: "#111827",
-    border: "1px solid #1E2940",
+    backgroundColor: "#ffffff",
+    border: "1px solid #e2e8f0",
     borderRadius: 12,
     padding: "24px 28px",
     minWidth: 480,
     maxWidth: "calc(100vw - 32px)",
-    boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+    boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
     zIndex: 100,
   };
 
@@ -164,7 +165,7 @@ const Header: React.FC = () => {
     display: "flex",
     alignItems: "center",
     gap: 10,
-    color: "#CBD5E1",
+    color: "#374151",
     fontSize: 13,
     fontWeight: 500,
     textDecoration: "none",
@@ -188,7 +189,7 @@ const Header: React.FC = () => {
   const burgerLineStyle: React.CSSProperties = {
     width: 24,
     height: 2,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#374151",
     borderRadius: 2,
     transition: "all 0.2s",
   };
@@ -200,8 +201,8 @@ const Header: React.FC = () => {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "#0A0E1A",
-    borderTop: "1px solid #1E2940",
+    backgroundColor: "#f8fafc",
+    borderTop: "1px solid #e2e8f0",
     zIndex: 49,
     overflowY: "auto",
     padding: "16px 24px 32px",
@@ -209,12 +210,12 @@ const Header: React.FC = () => {
 
   const mobileLinkStyle: React.CSSProperties = {
     display: "block",
-    color: "#CBD5E1",
+    color: "#374151",
     fontSize: 15,
     fontWeight: 500,
     padding: "12px 0",
     textDecoration: "none",
-    borderBottom: "1px solid #1E2940",
+    borderBottom: "1px solid #e2e8f0",
     fontFamily: "'Montserrat', sans-serif",
   };
 
@@ -222,15 +223,15 @@ const Header: React.FC = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    color: "#CBD5E1",
+    color: "#374151",
     fontSize: 15,
     fontWeight: 500,
     padding: "12px 0",
-    borderBottom: "1px solid #1E2940",
+    borderBottom: "1px solid #e2e8f0",
     cursor: "pointer",
     background: "transparent",
     border: "none",
-    borderBottomColor: "#1E2940",
+    borderBottomColor: "#e2e8f0",
     borderBottomWidth: 1,
     borderBottomStyle: "solid",
     width: "100%",
@@ -242,12 +243,12 @@ const Header: React.FC = () => {
     display: "flex",
     alignItems: "center",
     gap: 8,
-    color: "#94A3B8",
+    color: "#64748b",
     fontSize: 13,
     fontWeight: 500,
     padding: "9px 12px",
     textDecoration: "none",
-    borderBottom: "1px solid #1E2940",
+    borderBottom: "1px solid #e2e8f0",
     fontFamily: "'Montserrat', sans-serif",
   };
 
@@ -265,7 +266,7 @@ const Header: React.FC = () => {
     gap: 8,
     backgroundColor: "transparent",
     border: "1px solid #1565C0",
-    color: "#1E88E5",
+    color: "#1565C0",
     fontSize: 14,
     fontWeight: 600,
     padding: "12px 16px",
@@ -290,7 +291,7 @@ const Header: React.FC = () => {
               <Icon name="Zap" size={20} color="#ffffff" />
             </div>
             <span style={logoTextStyle}>
-              ЭЛЕКТРИК<span style={{ color: "#1E88E5" }}>УДМ</span>
+              ЭЛЕКТРИК<span style={{ color: "#1565C0" }}>УДМ</span>
             </span>
           </div>
 
@@ -309,11 +310,11 @@ const Header: React.FC = () => {
                     to={link.href}
                     style={navLinkStyle}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#0F172A";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#eff6ff";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#CBD5E1";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#475569";
                       (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
                     }}
                   >
@@ -332,7 +333,7 @@ const Header: React.FC = () => {
                     <div style={megaMenuStyle}>
                       <p
                         style={{
-                          color: "#64748B",
+                          color: "#94a3b8",
                           fontSize: 11,
                           fontWeight: 600,
                           letterSpacing: "0.1em",
@@ -357,12 +358,12 @@ const Header: React.FC = () => {
                             style={megaItemStyle}
                             onClick={() => setMegaOpen(false)}
                             onMouseEnter={(e) => {
-                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E2940";
-                              (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
+                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#eff6ff";
+                              (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
                             }}
                             onMouseLeave={(e) => {
                               (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
-                              (e.currentTarget as HTMLAnchorElement).style.color = "#CBD5E1";
+                              (e.currentTarget as HTMLAnchorElement).style.color = "#374151";
                             }}
                           >
                             <Icon name="ChevronRight" size={14} color="#1565C0" />
@@ -374,25 +375,25 @@ const Header: React.FC = () => {
                         style={{
                           marginTop: 16,
                           paddingTop: 16,
-                          borderTop: "1px solid #1E2940",
+                          borderTop: "1px solid #e2e8f0",
                         }}
                       >
                         <Link
                           to="/services/"
                           style={{
                             ...megaItemStyle,
-                            color: "#1E88E5",
+                            color: "#1565C0",
                             fontWeight: 600,
                           }}
                           onClick={() => setMegaOpen(false)}
                           onMouseEnter={(e) => {
-                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E2940";
+                            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#eff6ff";
                           }}
                           onMouseLeave={(e) => {
                             (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
                           }}
                         >
-                          <Icon name="ArrowRight" size={14} color="#1E88E5" />
+                          <Icon name="ArrowRight" size={14} color="#1565C0" />
                           Все услуги →
                         </Link>
                       </div>
@@ -405,11 +406,11 @@ const Header: React.FC = () => {
                   to={link.href}
                   style={navLinkStyle}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#1E88E5";
-                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#0F172A";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#1565C0";
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#eff6ff";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#CBD5E1";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#475569";
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
                   }}
                 >
@@ -425,7 +426,7 @@ const Header: React.FC = () => {
             style={callBtnStyle}
             className="hidden lg:flex"
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1E88E5";
+              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1e40af";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1565C0";
@@ -481,12 +482,12 @@ const Header: React.FC = () => {
                     style={{
                       transition: "transform 0.2s",
                       transform: mobileServicesOpen ? "rotate(180deg)" : "rotate(0deg)",
-                      color: "#64748B",
+                      color: "#94a3b8",
                     }}
                   />
                 </button>
                 {mobileServicesOpen && (
-                  <div style={{ backgroundColor: "#060912", borderRadius: 8, marginBottom: 4 }}>
+                  <div style={{ backgroundColor: "#f1f5f9", borderRadius: 8, marginBottom: 4 }}>
                     {SERVICES.map((s) => (
                       <Link
                         key={s.href}
