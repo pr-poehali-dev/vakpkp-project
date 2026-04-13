@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,6 +10,34 @@ const HERO_IMAGE =
   "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/becb3867-db9d-4052-b658-3018c572b13f.jpg";
 const WORK_IMAGE =
   "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/a512a4d0-1ac9-4cad-8dfb-0c8a17907816.jpg";
+
+const GALLERY = [
+  {
+    src: "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/41bf1540-74e4-48e2-b8c1-88e8cd2f1b7f.jpg",
+    title: "Сборка электрощита",
+    desc: "Аккуратный монтаж распределительного щита в квартире",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/fbc401de-f013-43dd-bf0c-8d4f91b789ca.jpg",
+    title: "Установка розеток",
+    desc: "Монтаж современных розеток и выключателей",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/4f64eeb7-86cd-459c-81dc-4c88096b0655.jpg",
+    title: "Монтаж освещения",
+    desc: "Установка точечных светильников и LED-подсветки",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/02726a10-5935-4fb6-a6b0-df85dfd1bfc5.jpg",
+    title: "Подключение люстры",
+    desc: "Профессиональная установка светильников любой сложности",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/67033018-a1a1-4925-bb7b-d31c4e59f20d/files/5327a54f-a1d2-4af4-9cfc-cb5cccb22385.jpg",
+    title: "Прокладка кабеля",
+    desc: "Штробление и укладка проводки при ремонте",
+  },
+];
 
 const font: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" };
 
@@ -175,6 +203,14 @@ const Index: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [hoveredService, setHoveredService] = useState<number | null>(null);
   const [hoveredCase, setHoveredCase] = useState<number | null>(null);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setGalleryIndex((i) => (i + 1) % GALLERY.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
 
   useSEO({
     title: "Электрик в Ижевске — вызов мастера от 300 руб, выезд в день обращения",
@@ -1056,6 +1092,174 @@ const Index: React.FC = () => {
                 Все кейсы
                 <Icon name="ArrowRight" size={15} />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════════════
+            БЛОК 6.5 — ГАЛЕРЕЯ РАБОТ
+        ══════════════════════════════════════════════════════════════ */}
+        <section style={{ ...sectionPad, backgroundColor: "#f1f5f9" }} aria-label="Фото наших работ">
+          <div style={container}>
+            <div style={{ textAlign: "center", marginBottom: 48 }}>
+              <span style={sectionLabel}>Портфолио</span>
+              <h2 style={h2Style}>Фото наших работ</h2>
+              <p style={subStyle}>Посмотрите, как выглядит качественный монтаж электрики</p>
+            </div>
+
+            {/* Carousel */}
+            <div style={{ position: "relative", maxWidth: 900, margin: "0 auto" }}>
+              {/* Main image */}
+              <div
+                style={{
+                  position: "relative",
+                  borderRadius: 20,
+                  overflow: "hidden",
+                  aspectRatio: "16/9",
+                  boxShadow: "0 8px 40px rgba(0,0,0,0.12)",
+                }}
+              >
+                {GALLERY.map((item, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      opacity: i === galleryIndex ? 1 : 0,
+                      transition: "opacity 0.6s ease",
+                    }}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                    {/* Caption */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        background: "linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%)",
+                        padding: "40px 28px 24px",
+                      }}
+                    >
+                      <p style={{ ...font, color: "#ffffff", fontSize: 18, fontWeight: 700, margin: "0 0 4px" }}>
+                        {item.title}
+                      </p>
+                      <p style={{ ...font, color: "rgba(255,255,255,0.8)", fontSize: 14, margin: 0 }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Prev / Next buttons */}
+                <button
+                  onClick={() => setGalleryIndex((i) => (i - 1 + GALLERY.length) % GALLERY.length)}
+                  style={{
+                    position: "absolute",
+                    left: 16,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(255,255,255,0.9)",
+                    border: "none",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                    zIndex: 2,
+                  }}
+                  aria-label="Предыдущее фото"
+                >
+                  <Icon name="ChevronLeft" size={22} color="#1565C0" />
+                </button>
+                <button
+                  onClick={() => setGalleryIndex((i) => (i + 1) % GALLERY.length)}
+                  style={{
+                    position: "absolute",
+                    right: 16,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(255,255,255,0.9)",
+                    border: "none",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                    zIndex: 2,
+                  }}
+                  aria-label="Следующее фото"
+                >
+                  <Icon name="ChevronRight" size={22} color="#1565C0" />
+                </button>
+              </div>
+
+              {/* Dots */}
+              <div style={{ display: "flex", justifyContent: "center", gap: 10, marginTop: 24 }}>
+                {GALLERY.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setGalleryIndex(i)}
+                    style={{
+                      width: i === galleryIndex ? 28 : 10,
+                      height: 10,
+                      borderRadius: 5,
+                      backgroundColor: i === galleryIndex ? "#1565C0" : "#cbd5e1",
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                      padding: 0,
+                    }}
+                    aria-label={`Фото ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Thumbnails */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: 12,
+                  marginTop: 20,
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                {GALLERY.map((item, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setGalleryIndex(i)}
+                    style={{
+                      width: 90,
+                      height: 60,
+                      borderRadius: 10,
+                      overflow: "hidden",
+                      border: i === galleryIndex ? "3px solid #1565C0" : "3px solid transparent",
+                      cursor: "pointer",
+                      padding: 0,
+                      transition: "border-color 0.2s",
+                      flexShrink: 0,
+                    }}
+                    aria-label={item.title}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
