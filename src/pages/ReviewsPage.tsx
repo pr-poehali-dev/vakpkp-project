@@ -30,44 +30,44 @@ export default function ReviewsPage() {
   });
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Отзывы" }]} />
           </div>
         </div>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Отзывы клиентов</h1>
-            <p className="text-gray-300 text-lg">Реальные отзывы от жителей Ижевска и Завьялово</p>
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>Отзывы клиентов</h1>
+            <p className="text-lg" style={{ color: "#334155" }}>Реальные отзывы от жителей Ижевска и Завьялово</p>
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {reviews.map((r, i) => (
-                <div key={i} style={{ backgroundColor: "#111827", border: "1px solid #1E2940", borderRadius: "8px", padding: "24px" }}>
+                <div key={i} style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", padding: "24px", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, si) => (
                       <Icon key={si} name="Star" size={15} style={{ color: "#F59E0B", fill: "#F59E0B" }} />
                     ))}
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-5">"{r.text}"</p>
-                  <div style={{ borderTop: "1px solid #1E2940", paddingTop: "14px" }} className="flex items-center justify-between">
+                  <p className="text-sm leading-relaxed mb-5" style={{ color: "#334155" }}>"{r.text}"</p>
+                  <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "14px" }} className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div style={{ backgroundColor: "#1565C0", borderRadius: "50%" }} className="w-9 h-9 flex items-center justify-center font-bold text-white text-sm">
                         {r.name[0]}
                       </div>
                       <div>
-                        <div className="font-bold text-white text-sm">{r.name}</div>
-                        <div className="text-gray-500 text-xs">{r.district}</div>
+                        <div className="font-bold text-sm" style={{ color: "#1e293b" }}>{r.name}</div>
+                        <div className="text-xs" style={{ color: "#64748b" }}>{r.district}</div>
                       </div>
                     </div>
-                    <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: "#1E2940", color: "#1E88E5" }}>{r.service}</span>
+                    <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: "#eff6ff", color: "#1E88E5" }}>{r.service}</span>
                   </div>
                 </div>
               ))}
@@ -75,16 +75,16 @@ export default function ReviewsPage() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl font-black text-white mb-3">Оставить отзыв</h2>
-            <p className="text-gray-400 mb-6">Если вы уже воспользовались нашими услугами, будем рады вашему отзыву</p>
+            <p className="mb-6" style={{ color: "rgba(255,255,255,0.8)" }}>Если вы уже воспользовались нашими услугами, будем рады вашему отзыву</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <span className="flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold text-gray-400" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+              <span className="flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold" style={{ backgroundColor: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.4)", color: "#ffffff" }}>
                 <Icon name="MapPin" size={16} />
                 Яндекс Карты
               </span>
-              <span className="flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold text-gray-400" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+              <span className="flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold" style={{ backgroundColor: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.4)", color: "#ffffff" }}>
                 <Icon name="MapPin" size={16} />
                 2ГИС
               </span>

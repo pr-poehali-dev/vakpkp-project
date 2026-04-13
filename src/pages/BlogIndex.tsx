@@ -36,23 +36,23 @@ export default function BlogIndex() {
   });
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Блог" }]} />
           </div>
         </div>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Блог об электрике</h1>
-            <p className="text-gray-300 text-lg">Полезные статьи и советы от практикующих электриков Ижевска</p>
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>Блог об электрике</h1>
+            <p className="text-lg" style={{ color: "#334155" }}>Полезные статьи и советы от практикующих электриков Ижевска</p>
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {articles.map((a, i) => (
@@ -60,19 +60,19 @@ export default function BlogIndex() {
                   key={i}
                   to={a.href}
                   className="block rounded-lg hover:scale-105 transition-all duration-200"
-                  style={{ backgroundColor: "#111827", border: "1px solid #1E2940", padding: "24px", textDecoration: "none" }}
+                  style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", padding: "24px", textDecoration: "none", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs px-2 py-1 rounded-full font-bold text-white" style={{ backgroundColor: catColors[a.cat] || "#1565C0" }}>{a.cat}</span>
-                    <span className="text-gray-500 text-xs flex items-center gap-1">
+                    <span className="text-xs flex items-center gap-1" style={{ color: "#64748b" }}>
                       <Icon name="Calendar" size={12} /> {a.date}
                     </span>
-                    <span className="text-gray-500 text-xs flex items-center gap-1">
+                    <span className="text-xs flex items-center gap-1" style={{ color: "#64748b" }}>
                       <Icon name="Clock" size={12} /> {a.read}
                     </span>
                   </div>
-                  <h2 className="font-bold text-white text-lg mb-2 leading-snug">{a.title}</h2>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{a.desc}</p>
+                  <h2 className="font-bold text-lg mb-2 leading-snug" style={{ color: "#1e293b" }}>{a.title}</h2>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "#64748b" }}>{a.desc}</p>
                   <span className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#1E88E5" }}>
                     Читать <Icon name="ArrowRight" size={14} />
                   </span>
@@ -82,16 +82,16 @@ export default function BlogIndex() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl font-black text-white mb-2">Нужна помощь электрика?</h2>
-            <p className="text-gray-400 mb-6">Звоните или пишите — выезд в день обращения</p>
+            <p className="mb-6" style={{ color: "rgba(255,255,255,0.8)" }}>Звоните или пишите — выезд в день обращения</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+79124658050" className="flex items-center justify-center gap-2 px-8 py-3 rounded font-bold text-white hover:opacity-90 transition-opacity" style={{ backgroundColor: "#1565C0" }}>
+              <a href="tel:+79124658050" className="flex items-center justify-center gap-2 px-8 py-3 rounded font-bold text-white hover:opacity-90 transition-opacity" style={{ backgroundColor: "rgba(255,255,255,0.2)", border: "2px solid rgba(255,255,255,0.6)" }}>
                 <Icon name="Phone" size={18} />
                 Позвонить
               </a>
-              <a href="https://t.me/elektrik_izh" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 px-8 py-3 rounded font-bold hover:opacity-80 transition-opacity" style={{ border: "2px solid #1E88E5", color: "#1E88E5" }}>
+              <a href="https://t.me/elektrik_izh" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 px-8 py-3 rounded font-bold text-white hover:opacity-80 transition-opacity" style={{ border: "2px solid rgba(255,255,255,0.6)" }}>
                 <Icon name="Send" size={18} />
                 Telegram
               </a>

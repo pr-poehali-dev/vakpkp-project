@@ -83,22 +83,22 @@ export default function PricesPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Цены" }]} />
           </div>
         </div>
 
         {/* Hero */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>
               Цены на услуги электрика в Ижевске
             </h1>
-            <p className="text-gray-300 text-lg mb-6">
+            <p className="text-lg mb-6" style={{ color: "#334155" }}>
               Честные цены без скрытых платежей. Стоимость озвучиваем до начала работ.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -113,7 +113,7 @@ export default function PricesPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {["Смета до начала работ", "Без скрытых платежей", "Гарантия на все работы"].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: "#1E2940", color: "#1E88E5" }}>
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: "#eff6ff", color: "#1565C0" }}>
                   <Icon name="Check" size={14} />
                   {item}
                 </div>
@@ -123,7 +123,7 @@ export default function PricesPage() {
         </section>
 
         {/* Price tables */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {priceCategories.map((cat, ci) => (
@@ -132,15 +132,15 @@ export default function PricesPage() {
                     <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-10 h-10 flex items-center justify-center flex-shrink-0">
                       <Icon name={cat.icon} size={20} className="text-white" />
                     </div>
-                    <h2 className="text-lg font-bold text-white">{cat.title}</h2>
+                    <h2 className="text-lg font-bold" style={{ color: "#1e293b" }}>{cat.title}</h2>
                   </div>
-                  <div style={{ border: "1px solid #1E2940", borderRadius: "8px", overflow: "hidden" }}>
+                  <div style={{ border: "1px solid #e2e8f0", borderRadius: "8px", overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                     {cat.items.map((item, ii) => (
                       <div key={ii} className="flex items-center justify-between px-4 py-3" style={{
-                        backgroundColor: ii % 2 === 0 ? "#111827" : "#0D1220",
-                        borderBottom: ii < cat.items.length - 1 ? "1px solid #1E2940" : "none",
+                        backgroundColor: ii % 2 === 0 ? "#ffffff" : "#f8fafc",
+                        borderBottom: ii < cat.items.length - 1 ? "1px solid #e2e8f0" : "none",
                       }}>
-                        <span className="text-gray-300 text-sm">{item.name}</span>
+                        <span className="text-sm" style={{ color: "#334155" }}>{item.name}</span>
                         <span className="font-bold text-sm" style={{ color: "#1E88E5", whiteSpace: "nowrap" as const }}>{item.price}</span>
                       </div>
                     ))}
@@ -152,9 +152,9 @@ export default function PricesPage() {
         </section>
 
         {/* What's included */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-8 text-center">Что входит в стоимость</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-8 text-center" style={{ color: "#1e293b" }}>Что входит в стоимость</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
               {[
                 { icon: "Car", title: "Выезд мастера", desc: "Входит в стоимость работ при заказе от 1 000 руб" },
@@ -162,12 +162,12 @@ export default function PricesPage() {
                 { icon: "Shield", title: "Гарантия", desc: "На все выполненные работы письменная гарантия" },
                 { icon: "Sparkles", title: "Уборка", desc: "Убираем рабочее место после завершения работ" },
               ].map((item, i) => (
-                <div key={i} className="p-5 rounded-lg text-center" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+                <div key={i} className="p-5 rounded-lg text-center" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div style={{ backgroundColor: "#1565C0", borderRadius: "50%" }} className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
                     <Icon name={item.icon} size={22} className="text-white" />
                   </div>
-                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold mb-2" style={{ color: "#1e293b" }}>{item.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -175,23 +175,23 @@ export default function PricesPage() {
         </section>
 
         {/* FAQ */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-8 text-center">Вопросы о ценах</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-8 text-center" style={{ color: "#1e293b" }}>Вопросы о ценах</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
-                <div key={i} style={{ border: "1px solid #1E2940", borderRadius: "8px", overflow: "hidden" }}>
+                <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "8px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="w-full flex items-center justify-between p-5 text-left hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: "#111827", textAlign: "left" as const }}
+                    style={{ backgroundColor: "#ffffff", textAlign: "left" as const }}
                   >
-                    <span className="font-semibold text-white pr-4">{faq.q}</span>
+                    <span className="font-semibold pr-4" style={{ color: "#1e293b" }}>{faq.q}</span>
                     <Icon name={openFaq === i ? "Minus" : "Plus"} size={18} style={{ color: "#1E88E5", flexShrink: 0 }} />
                   </button>
                   {openFaq === i && (
-                    <div className="px-5 pb-5 pt-3" style={{ backgroundColor: "#0A0E1A" }}>
-                      <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
+                    <div className="px-5 pb-5 pt-3" style={{ backgroundColor: "#f8fafc" }}>
+                      <p className="text-sm leading-relaxed" style={{ color: "#334155" }}>{faq.a}</p>
                     </div>
                   )}
                 </div>
@@ -201,11 +201,11 @@ export default function PricesPage() {
         </section>
 
         {/* CTA */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-black text-white mb-2">Узнать точную стоимость</h2>
-              <p className="text-gray-400">Опишите задачу — рассчитаем стоимость бесплатно</p>
+              <p style={{ color: "rgba(255,255,255,0.8)" }}>Опишите задачу — рассчитаем стоимость бесплатно</p>
             </div>
             <ContactForm />
           </div>

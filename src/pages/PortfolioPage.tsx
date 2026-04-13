@@ -31,31 +31,31 @@ export default function PortfolioPage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Портфолио" }]} />
           </div>
         </div>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Выполненные работы</h1>
-            <p className="text-gray-300 text-lg mb-6">Реальные кейсы с ценами и сроками. Работаем в Ижевске и Завьялово.</p>
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>Выполненные работы</h1>
+            <p className="text-lg mb-6" style={{ color: "#334155" }}>Реальные кейсы с ценами и сроками. Работаем в Ижевске и Завьялово.</p>
             <div className="flex flex-wrap justify-center gap-6">
               {[{ n: "500+", l: "Объектов" }, { n: "10+", l: "Лет опыта" }, { n: "100%", l: "Гарантия" }].map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="text-3xl font-black" style={{ color: "#1E88E5" }}>{s.n}</div>
-                  <div className="text-gray-400 text-sm">{s.l}</div>
+                  <div className="text-sm" style={{ color: "#64748b" }}>{s.l}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {cases.map((c, i) => (
@@ -64,24 +64,25 @@ export default function PortfolioPage() {
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}
                   style={{
-                    backgroundColor: "#111827",
-                    border: hovered === i ? "1px solid #1565C0" : "1px solid #1E2940",
+                    backgroundColor: "#ffffff",
+                    border: hovered === i ? "1px solid #1565C0" : "1px solid #e2e8f0",
                     borderRadius: "8px",
                     padding: "24px",
                     transition: "all 0.2s",
                     transform: hovered === i ? "translateY(-3px)" : "none",
+                    boxShadow: hovered === i ? "0 8px 24px rgba(0,0,0,0.12)" : "0 2px 12px rgba(0,0,0,0.08)",
                   }}
                 >
                   <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-11 h-11 flex items-center justify-center mb-4">
                     <Icon name={c.icon} size={22} className="text-white" />
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "#1E2940", color: "#1E88E5" }}>{c.district}</span>
+                    <span className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "#eff6ff", color: "#1E88E5" }}>{c.district}</span>
                   </div>
-                  <h3 className="font-bold text-white mb-3 leading-snug">{c.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{c.desc}</p>
-                  <div className="flex items-center justify-between text-sm pt-3" style={{ borderTop: "1px solid #1E2940" }}>
-                    <span className="flex items-center gap-1 text-gray-400">
+                  <h3 className="font-bold mb-3 leading-snug" style={{ color: "#1e293b" }}>{c.title}</h3>
+                  <p className="text-sm mb-4 leading-relaxed" style={{ color: "#64748b" }}>{c.desc}</p>
+                  <div className="flex items-center justify-between text-sm pt-3" style={{ borderTop: "1px solid #e2e8f0" }}>
+                    <span className="flex items-center gap-1" style={{ color: "#64748b" }}>
                       <Icon name="Clock" size={13} /> {c.time}
                     </span>
                     <span className="font-bold" style={{ color: "#1E88E5" }}>{c.price}</span>
@@ -92,10 +93,10 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl md:text-3xl font-black text-white mb-2">Нужен электрик в Ижевске?</h2>
-            <p className="text-gray-400 mb-8">Обсудим задачу и назовём стоимость бесплатно</p>
+            <p className="mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>Обсудим задачу и назовём стоимость бесплатно</p>
             <ContactForm />
           </div>
         </section>

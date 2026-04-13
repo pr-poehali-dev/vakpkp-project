@@ -31,20 +31,20 @@ export default function AboutPage() {
   });
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "О компании" }]} />
           </div>
         </div>
 
         {/* Hero */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-6">О компании</h1>
-            <div className="space-y-4 text-gray-300 leading-relaxed mb-8">
+            <h1 className="text-4xl md:text-5xl font-black mb-6" style={{ color: "#1e293b" }}>О компании</h1>
+            <div className="space-y-4 leading-relaxed mb-8" style={{ color: "#334155" }}>
               <p>Мы — профессиональная бригада электриков в Ижевске с опытом работы более 10 лет. За это время выполнено свыше 500 объектов: квартиры, частные дома, новостройки и коммерческие помещения по всему Ижевску и в Завьялово.</p>
               <p>Работаем с жилыми и нежилыми объектами любой сложности — от замены одной розетки до полного монтажа электрики в частном доме под ключ. Выезжаем с 8:00 до 22:00 без выходных, в день обращения.</p>
             </div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
         </section>
 
         {/* Stats */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
               {[
@@ -71,9 +71,9 @@ export default function AboutPage() {
                 { num: "100%", label: "Гарантия" },
                 { num: "60 мин", label: "Мин. время выезда" },
               ].map((s, i) => (
-                <div key={i} className="text-center p-6 rounded-lg" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+                <div key={i} className="text-center p-6 rounded-lg" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div className="text-3xl font-black mb-1" style={{ color: "#1E88E5" }}>{s.num}</div>
-                  <div className="text-gray-400 text-sm">{s.label}</div>
+                  <div className="text-sm" style={{ color: "#64748b" }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -81,17 +81,17 @@ export default function AboutPage() {
         </section>
 
         {/* Principles */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-10 text-center">Наши принципы</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-10 text-center" style={{ color: "#1e293b" }}>Наши принципы</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {principles.map((p, i) => (
-                <div key={i} className="p-6 rounded-lg" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+                <div key={i} className="p-6 rounded-lg" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-11 h-11 flex items-center justify-center mb-4">
                     <Icon name={p.icon} size={20} className="text-white" />
                   </div>
-                  <h3 className="font-bold text-white mb-2">{p.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{p.desc}</p>
+                  <h3 className="font-bold mb-2" style={{ color: "#1e293b" }}>{p.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{p.desc}</p>
                 </div>
               ))}
             </div>
@@ -99,17 +99,17 @@ export default function AboutPage() {
         </section>
 
         {/* Object types */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-10 text-center">С чем работаем</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-10 text-center" style={{ color: "#1e293b" }}>С чем работаем</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
               {objectTypes.map((o, i) => (
-                <div key={i} className="p-5 rounded-lg text-center" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
-                  <div style={{ backgroundColor: "#1E2940", borderRadius: "50%" }} className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <div key={i} className="p-5 rounded-lg text-center" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
+                  <div style={{ backgroundColor: "#eff6ff", borderRadius: "50%" }} className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
                     <Icon name={o.icon} size={22} style={{ color: "#1E88E5" }} />
                   </div>
-                  <h3 className="font-bold text-white mb-2">{o.title}</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">{o.desc}</p>
+                  <h3 className="font-bold mb-2" style={{ color: "#1e293b" }}>{o.title}</h3>
+                  <p className="text-xs leading-relaxed" style={{ color: "#64748b" }}>{o.desc}</p>
                 </div>
               ))}
             </div>
@@ -117,22 +117,22 @@ export default function AboutPage() {
         </section>
 
         {/* Guarantees */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-8 text-center">Наши гарантии</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-8 text-center" style={{ color: "#1e293b" }}>Наши гарантии</h2>
             <div className="space-y-4">
               {[
                 { icon: "Shield", title: "2 года гарантии на работы", desc: "Даём письменную гарантию на все выполненные электромонтажные работы сроком 2 года." },
                 { icon: "Car", title: "Бесплатный выезд по гарантийному случаю", desc: "Если в период гарантии возникнет проблема по нашей вине — приедем и устраним бесплатно." },
                 { icon: "FileText", title: "Документ на руки", desc: "По завершению работ предоставляем договор или акт выполненных работ." },
               ].map((g, i) => (
-                <div key={i} className="flex items-start gap-4 p-5 rounded-lg" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+                <div key={i} className="flex items-start gap-4 p-5 rounded-lg" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-10 h-10 flex items-center justify-center flex-shrink-0">
                     <Icon name={g.icon} size={18} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white mb-1">{g.title}</h3>
-                    <p className="text-gray-400 text-sm">{g.desc}</p>
+                    <h3 className="font-bold mb-1" style={{ color: "#1e293b" }}>{g.title}</h3>
+                    <p className="text-sm" style={{ color: "#64748b" }}>{g.desc}</p>
                   </div>
                 </div>
               ))}
@@ -140,11 +140,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-black text-white mb-2">Свяжитесь с нами</h2>
-              <p className="text-gray-400">Ответим на вопросы и рассчитаем стоимость</p>
+              <p style={{ color: "rgba(255,255,255,0.8)" }}>Ответим на вопросы и рассчитаем стоимость</p>
             </div>
             <ContactForm />
           </div>

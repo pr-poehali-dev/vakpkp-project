@@ -21,36 +21,36 @@ export default function ContactsPage() {
   });
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Контакты" }]} />
           </div>
         </div>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Контакты</h1>
-            <p className="text-gray-300 text-lg">Позвоните или напишите — ответим быстро и рассчитаем стоимость</p>
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>Контакты</h1>
+            <p className="text-lg" style={{ color: "#334155" }}>Позвоните или напишите — ответим быстро и рассчитаем стоимость</p>
           </div>
         </section>
 
         {/* Contact cards */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {/* Phone */}
-              <div className="p-8 rounded-xl" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+              <div className="p-8 rounded-xl" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                 <div style={{ backgroundColor: "#1565C0", borderRadius: "50%" }} className="w-14 h-14 flex items-center justify-center mb-5">
                   <Icon name="Phone" size={26} className="text-white" />
                 </div>
-                <h2 className="text-lg font-bold text-white mb-1">Телефон</h2>
+                <h2 className="text-lg font-bold mb-1" style={{ color: "#1e293b" }}>Телефон</h2>
                 <a href="tel:+79124658050" className="text-2xl font-black hover:opacity-80 transition-opacity block mb-4" style={{ color: "#1E88E5" }}>
                   +7 (912) 465-80-50
                 </a>
-                <p className="text-gray-400 text-sm mb-5">Работаем с 8:00 до 22:00 без выходных</p>
+                <p className="text-sm mb-5" style={{ color: "#64748b" }}>Работаем с 8:00 до 22:00 без выходных</p>
                 <a href="tel:+79124658050" className="flex items-center justify-center gap-2 w-full py-3 rounded font-bold text-white hover:opacity-90 transition-opacity" style={{ backgroundColor: "#1565C0" }}>
                   <Icon name="Phone" size={18} />
                   Позвонить
@@ -58,15 +58,15 @@ export default function ContactsPage() {
               </div>
 
               {/* Telegram */}
-              <div className="p-8 rounded-xl" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
+              <div className="p-8 rounded-xl" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                 <div style={{ backgroundColor: "#1565C0", borderRadius: "50%" }} className="w-14 h-14 flex items-center justify-center mb-5">
                   <Icon name="Send" size={26} className="text-white" />
                 </div>
-                <h2 className="text-lg font-bold text-white mb-1">Telegram</h2>
+                <h2 className="text-lg font-bold mb-1" style={{ color: "#1e293b" }}>Telegram</h2>
                 <a href="https://t.me/elektrik_izh" target="_blank" rel="noreferrer" className="text-2xl font-black hover:opacity-80 transition-opacity block mb-4" style={{ color: "#1E88E5" }}>
                   @elektrik_izh
                 </a>
-                <p className="text-gray-400 text-sm mb-5">Напишите — ответим в течение нескольких минут</p>
+                <p className="text-sm mb-5" style={{ color: "#64748b" }}>Напишите — ответим в течение нескольких минут</p>
                 <a href="https://t.me/elektrik_izh" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded font-bold hover:opacity-80 transition-opacity" style={{ border: "2px solid #1E88E5", color: "#1E88E5" }}>
                   <Icon name="Send" size={18} />
                   Написать в Telegram
@@ -75,18 +75,18 @@ export default function ContactsPage() {
             </div>
 
             {/* Schedule */}
-            <div className="p-6 rounded-xl mb-6" style={{ backgroundColor: "#111827", border: "1px solid #1E2940" }}>
-              <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <div className="p-6 rounded-xl mb-6" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
+              <h2 className="text-lg font-bold mb-4 flex items-center gap-2" style={{ color: "#1e293b" }}>
                 <Icon name="Clock" size={20} style={{ color: "#1E88E5" }} />
                 Режим работы
               </h2>
-              <div style={{ border: "1px solid #1E2940", borderRadius: "8px", overflow: "hidden" }}>
+              <div style={{ border: "1px solid #e2e8f0", borderRadius: "8px", overflow: "hidden" }}>
                 {[
                   { day: "Понедельник – Воскресенье", hours: "8:00 – 22:00" },
                   { day: "Аварийный выезд", hours: "Круглосуточно" },
                 ].map((row, i) => (
-                  <div key={i} className="flex items-center justify-between px-5 py-3" style={{ backgroundColor: i % 2 === 0 ? "#0A0E1A" : "#0D1220", borderBottom: i === 0 ? "1px solid #1E2940" : "none" }}>
-                    <span className="text-gray-300 text-sm">{row.day}</span>
+                  <div key={i} className="flex items-center justify-between px-5 py-3" style={{ backgroundColor: i % 2 === 0 ? "#f8fafc" : "#f1f5f9", borderBottom: i === 0 ? "1px solid #e2e8f0" : "none" }}>
+                    <span className="text-sm" style={{ color: "#334155" }}>{row.day}</span>
                     <span className="font-bold text-sm" style={{ color: "#1E88E5" }}>{row.hours}</span>
                   </div>
                 ))}
@@ -96,13 +96,13 @@ export default function ContactsPage() {
         </section>
 
         {/* Districts */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl font-black text-white mb-4">Районы выезда</h2>
-            <p className="text-gray-400 mb-6">Выезжаем по всему Ижевску и в Завьялово без доплат за выезд.</p>
+            <h2 className="text-2xl font-black mb-4" style={{ color: "#1e293b" }}>Районы выезда</h2>
+            <p className="mb-6" style={{ color: "#64748b" }}>Выезжаем по всему Ижевску и в Завьялово без доплат за выезд.</p>
             <div className="flex flex-wrap gap-3">
               {districts.map((d, i) => (
-                <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: "#111827", border: "1px solid #1E2940", color: "#d1d5db" }}>
+                <span key={i} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", color: "#475569" }}>
                   <Icon name="MapPin" size={13} style={{ color: "#1E88E5" }} />
                   {d}
                 </span>
@@ -112,11 +112,11 @@ export default function ContactsPage() {
         </section>
 
         {/* Form */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-black text-white mb-2">Оставить заявку</h2>
-              <p className="text-gray-400">Опишите задачу — перезвоним в течение 30 минут</p>
+              <p style={{ color: "rgba(255,255,255,0.8)" }}>Опишите задачу — перезвоним в течение 30 минут</p>
             </div>
             <ContactForm />
           </div>

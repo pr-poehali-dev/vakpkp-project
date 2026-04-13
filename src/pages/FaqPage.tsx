@@ -51,23 +51,23 @@ export default function FaqPage() {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "FAQ" }]} />
           </div>
         </div>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Частые вопросы</h1>
-            <p className="text-gray-300 text-lg">Ответы на самые распространённые вопросы о наших услугах</p>
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>Частые вопросы</h1>
+            <p className="text-lg" style={{ color: "#334155" }}>Ответы на самые распространённые вопросы о наших услугах</p>
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-12">
             {faqCategories.map((cat, ci) => (
               <div key={ci}>
@@ -75,25 +75,25 @@ export default function FaqPage() {
                   <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-10 h-10 flex items-center justify-center">
                     <Icon name={cat.icon} size={18} className="text-white" />
                   </div>
-                  <h2 className="text-xl font-bold text-white">{cat.title}</h2>
+                  <h2 className="text-xl font-bold" style={{ color: "#1e293b" }}>{cat.title}</h2>
                 </div>
                 <div className="space-y-3">
                   {cat.items.map((item, ii) => {
                     const key = `${ci}-${ii}`;
                     const isOpen = openItem === key;
                     return (
-                      <div key={ii} style={{ border: "1px solid #1E2940", borderRadius: "8px", overflow: "hidden" }}>
+                      <div key={ii} style={{ border: "1px solid #e2e8f0", borderRadius: "8px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
                         <button
                           onClick={() => setOpenItem(isOpen ? null : key)}
                           className="w-full flex items-center justify-between p-5 text-left hover:opacity-90 transition-opacity"
-                          style={{ backgroundColor: "#111827", textAlign: "left" as const }}
+                          style={{ backgroundColor: "#ffffff", textAlign: "left" as const }}
                         >
-                          <span className="font-semibold text-white pr-4 text-sm">{item.q}</span>
+                          <span className="font-semibold pr-4 text-sm" style={{ color: "#1e293b" }}>{item.q}</span>
                           <Icon name={isOpen ? "Minus" : "Plus"} size={16} style={{ color: "#1E88E5", flexShrink: 0 }} />
                         </button>
                         {isOpen && (
-                          <div className="px-5 pb-5 pt-3" style={{ backgroundColor: "#0A0E1A" }}>
-                            <p className="text-gray-300 text-sm leading-relaxed">{item.a}</p>
+                          <div className="px-5 pb-5 pt-3" style={{ backgroundColor: "#f8fafc" }}>
+                            <p className="text-sm leading-relaxed" style={{ color: "#334155" }}>{item.a}</p>
                           </div>
                         )}
                       </div>
@@ -105,11 +105,11 @@ export default function FaqPage() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-black text-white mb-2">Остались вопросы?</h2>
-              <p className="text-gray-400">Задайте их — ответим и рассчитаем стоимость</p>
+              <p style={{ color: "rgba(255,255,255,0.8)" }}>Задайте их — ответим и рассчитаем стоимость</p>
             </div>
             <ContactForm />
           </div>

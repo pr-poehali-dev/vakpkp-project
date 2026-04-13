@@ -101,22 +101,22 @@ export default function ServicesIndex() {
   });
 
   return (
-    <div style={{ ...font, backgroundColor: "#0A0E1A", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ ...font, backgroundColor: "#f8fafc", minHeight: "100vh", paddingTop: "64px" }}>
       <Header />
       <main>
-        <div style={{ backgroundColor: "#0D1220", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#f1f5f9", padding: "8px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Услуги" }]} />
           </div>
         </div>
 
         {/* Hero */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ color: "#1e293b" }}>
               Услуги электрика в Ижевске
             </h1>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#334155" }}>
               Полный спектр электромонтажных работ в Ижевске и Завьялово. Выезд с 8:00 до 22:00, работаем без выходных.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -133,22 +133,24 @@ export default function ServicesIndex() {
         </section>
 
         {/* Groups */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f8fafc", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-10">Виды услуг</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-10" style={{ color: "#1e293b" }}>Виды услуг</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {groups.map((g, i) => (
-                <div key={i} style={{ backgroundColor: "#111827", border: "1px solid #1E2940", borderRadius: "8px", padding: "24px" }}>
+                <div key={i} style={{ backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", padding: "24px", boxShadow: "0 2px 12px rgba(0,0,0,0.08)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <div style={{ backgroundColor: "#1565C0", borderRadius: "8px" }} className="w-10 h-10 flex items-center justify-center">
                       <Icon name={g.icon} size={20} className="text-white" />
                     </div>
-                    <span className="font-bold text-white">{g.title}</span>
+                    <span className="font-bold" style={{ color: "#1e293b" }}>{g.title}</span>
                   </div>
                   <ul className="space-y-2">
                     {g.links.map((l, li) => (
                       <li key={li}>
-                        <Link to={l.href} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors py-1">
+                        <Link to={l.href} className="flex items-center gap-2 text-sm py-1 transition-colors" style={{ color: "#64748b", textDecoration: "none" }}
+                          onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#1e293b"; }}
+                          onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#64748b"; }}>
                           <Icon name="ChevronRight" size={14} style={{ color: "#1E88E5", flexShrink: 0 }} />
                           {l.label}
                         </Link>
@@ -162,12 +164,14 @@ export default function ServicesIndex() {
         </section>
 
         {/* All services list */}
-        <section style={{ backgroundColor: "#0D1220", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#f1f5f9", padding: "60px 0" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-8">Полный перечень услуг</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-8" style={{ color: "#1e293b" }}>Полный перечень услуг</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
               {allServices.map((s, i) => (
-                <Link key={i} to={s.href} className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-opacity-5 transition-colors" style={{ borderBottom: "1px solid #1E2940" }}>
+                <Link key={i} to={s.href} className="flex items-center gap-3 px-4 py-3 transition-colors" style={{ borderBottom: "1px solid #e2e8f0", color: "#334155", textDecoration: "none" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#1e293b"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#334155"; }}>
                   <Icon name="ChevronRight" size={16} style={{ color: "#1E88E5", flexShrink: 0 }} />
                   {s.label}
                 </Link>
@@ -177,11 +181,11 @@ export default function ServicesIndex() {
         </section>
 
         {/* CTA */}
-        <section style={{ backgroundColor: "#0A0E1A", padding: "60px 0" }}>
+        <section style={{ backgroundColor: "#1565C0", padding: "60px 0" }}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-black text-white mb-2">Вызвать электрика в Ижевске</h2>
-              <p className="text-gray-400">Оставьте заявку — мастер перезвонит в течение 30 минут</p>
+              <p style={{ color: "rgba(255,255,255,0.8)" }}>Оставьте заявку — мастер перезвонит в течение 30 минут</p>
             </div>
             <ContactForm />
           </div>
